@@ -1,9 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+import 'package:longapp/screen/login.dart';
 
 import '../screen/home.dart';
+import 'Resources/RoutesManger.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await Firebase.initializeApp();
+    print("Success");
+  } catch (e) {}
+
   runApp(const MyApp());
 }
 
@@ -20,6 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: RouteGenerator.getRoute,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: kColorScheme,
@@ -32,7 +43,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: GoogleFonts.montserrat().fontFamily,
       ),
-      home: const HomeScreen(),
+      home: const Login(),
     );
   }
 }

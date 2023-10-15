@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "396473744140",
+    "project_id": "longapp-8ee31",
+    "storage_bucket": "longapp-8ee31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396473744140:android:1be192495df85de63d6729",
+        "android_client_info": {
+          "package_name": "com.example.longapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn_0gZTJ5y3W9d1OGdsQCjeoa57cEHJZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
