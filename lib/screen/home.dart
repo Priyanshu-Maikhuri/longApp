@@ -25,12 +25,14 @@ class HomeScreen extends StatelessWidget {
       body: Padding(
           padding: const EdgeInsets.all(16),
           child: Center(
-              child: Text(
-            'LONG APP',
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge!
-                .copyWith(color: Theme.of(context).colorScheme.onBackground),
+              child: Column(
+            children: [
+              Text(
+                'LONG APP',
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                    color: Theme.of(context).colorScheme.onBackground),
+              ),
+            ],
           ))),
     );
   }
