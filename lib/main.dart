@@ -12,7 +12,9 @@ Future<void> main() async {
   try {
     await Firebase.initializeApp();
     print("Success");
-  } catch (e) {}
+  } catch (e) {
+    print('anything');
+  }
 
   runApp(const MyApp());
 }
@@ -37,9 +39,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kColorScheme.background,
         useMaterial3: true,
         textTheme: const TextTheme().copyWith(
-          titleLarge: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
-          titleMedium: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
-          titleSmall: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
+          titleLarge: GoogleFonts.montserrat(fontSize: 25, fontWeight: FontWeight.bold),
+          titleMedium: GoogleFonts.montserrat(fontSize: 21, fontWeight: FontWeight.bold),
+          titleSmall: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         fontFamily: GoogleFonts.montserrat().fontFamily,
       ),
